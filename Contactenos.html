@@ -1,0 +1,50 @@
+</html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Manjares Casa Roja</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+
+    <link rel="icon" href="logo.ico">
+    <meta name="keywords" content="dulce, leche, majar blanco, arequipe, alimentos">
+    <meta name="description" content="Manjares Casa Roja es una empresa dedicada a la producción y comercialización de dulces tradicionales hechos a base de leche">
+    <meta name="author" content="María Fernanda Cuadros">
+    <meta name="robots" content="index">
+</head>
+
+<body>
+    <header>
+
+        <a title="Inicio" href="index.html"><img src="LOGOTIPO.png" width="13%" alt="" /></a>
+        <input type="search" name="Buscar" placeholder="¿Qué estás buscando?">
+        <car Type="overlay">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="comprar.html">Comprar</a></li>
+                    <li><a href="Sobre nosotros.html">Sobre nosotros</a></li>
+                    <li><a href="contactenos.html">Contactenos</a></li>
+                </ul>
+            </nav>
+            <h1>ESCRIBENOS</h1>
+
+            <div id="mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.172881380278!2d-74.23591268523819!3d4.56291939668492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f7545b479736d%3A0x57463b0c1ad19c59!2sCra.%206B%20%2313-16%2C%20Soacha%2C%20Cundinamarca!5e0!3m2!1ses-419!2sco!4v1601250876763!5m2!1ses-419!2sco"
+                    width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+            <div id="Formulario">
+                <form method="post">
+                    <input type="text" name="nombre" required="required" placeholder="Ingrese Nombre">*<br>
+                    <input type="email" name="email" required="required" placeholder="Ingrese Email">*<br>
+                    <input type="text" name="asunto" required="required" placeholder="Ingrese Asunto">*<br>
+                    <textarea name="mensaje" required="required" placeholder="Ingrese mensaje" rows="6" cols="30"></textarea>*<br>
+                    <input type="submit" name="boton" id="boton" value="Enviar">
+
+
+            </div>
+
+            <<?php if (isset($_POST[ "boton"])) { $nombre=$ _POST[ "nombre"]; $email=$ _POST[ "email"]; $asunto=$ _POST[ "asunto"]; $men=$ _POST[ "mensaje"]; $mensaje="El mensaje fue enviado por:" . $nombre "\n"; $mensaje=$ mensaje . "El correo:". $email. "\n"; $mensaje=$
+                mensaje . $men; mail( 'fercuadros22@gmail.com', $asunto,$mensaje, "FROM $email"); echo '<script>alert("Su mensaje fue enviado")</script>'; } ?>
